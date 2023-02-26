@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "generate-build-version": "npm version patch && node ./src/generate-build-version",
     "prebuild": "npm run generate-build-version && npm run v",
-    "v": "git add . && git commit -m 'Update version number'",
+    "v": "git add . && git commit -m 'Update version number' && git push",
     "start:localhost": "react-scripts start",
     "build:localhost": "npm run prebuild & react-scripts build"
   },
