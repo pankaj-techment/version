@@ -16,6 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "preversion": "git add -A && git commit -m 'chore: commit all changes before version bump'",
     "generate-build-version": "npm version patch && node ./src/generate-build-version",
     "prebuild": "npm run generate-build-version && npm run v",
     "v": "git add . && git commit -m 'Update version number' && git push",
