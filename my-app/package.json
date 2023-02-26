@@ -15,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-build-version": "npm version patch && node ./src/generate-build-version",
+    "prebuild": "npm run generate-build-version",
+    "start:localhost": "react-scripts start",
+    "build:localhost": "npm run prebuild & react-scripts build"
   },
   "eslintConfig": {
     "extends": [
