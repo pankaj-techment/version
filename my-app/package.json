@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "version": "0.1.12",
+  "version": "0.1.10",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -19,7 +19,7 @@
     "preversion": "git diff-index --quiet HEAD -- || (git add . && git commit -m 'chore: save changes' && echo 'Changes committed.')",
     "generate-build-version": "npm version patch && node ./src/generate-build-version",
     "prebuild": "npm run generate-build-version && npm run v",
-    "v": "git add . && git commit -m 'Update version number' ",
+    "v": "git add . && git commit -m 'Update version number' && git push",
     "start:localhost": "react-scripts start",
     "build:localhost": "npm run prebuild & react-scripts build"
   },
